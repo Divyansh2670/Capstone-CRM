@@ -3,14 +3,14 @@
 A full-featured CRM built with React, shadcn-admin-kit, and Supabase.
 
 
-Atomic CRM is free and open-source. You can test it online at 
+ClientCraft CRM is free and open-source. You can test it online at 
 
 ## Features
 
 - 📇 **Organize Contacts**: Keep all your contacts in one easily accessible place.
 - ⏰ **Create Tasks & Set Reminders**: Never miss a follow-up or deadline.
 - 📝 **Take Notes**: Capture important details and insights effortlessly.
-- ✉️ **Capture Emails**: CC Atomic CRM to automatically save communications as notes.
+- ✉️ **Capture Emails**: CC ClientCraft CRM to automatically save communications as notes.
 - 📊 **Manage Deals**: Visualize and track your sales pipeline in a Kanban board.
 - 🔄 **Import & Export Data**: Easily transfer contacts in and out of the system.
 - 🔐 **Control Access**: Log in with Google, Azure, Keycloak, and Auth0.
