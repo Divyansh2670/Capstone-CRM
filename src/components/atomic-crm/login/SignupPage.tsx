@@ -2,7 +2,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
 import { useDataProvider, useLogin, useNotify } from "ra-core";
 import { useForm, type SubmitHandler } from "react-hook-form";
-import { Navigate } from "react-router";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -17,7 +16,7 @@ export const SignupPage = () => {
   const queryClient = useQueryClient();
   const dataProvider = useDataProvider<CrmDataProvider>();
   const { darkModeLogo: logo, title } = useConfigurationContext();
-  const { data: isInitialized, isPending } = useQuery({
+  const { isPending } = useQuery({
     queryKey: ["init"],
     queryFn: async () => {
       return dataProvider.isInitialized();
@@ -60,11 +59,6 @@ export const SignupPage = () => {
 
   if (isPending) {
     return <LoginSkeleton />;
-  }
-
-  // For the moment, we only allow one user to sign up. Other users must be created by the administrator.
-  if (isInitialized) {
-    return <Navigate to="/login" />;
   }
 
   const onSubmit: SubmitHandler<SignUpData> = async (data) => {
